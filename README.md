@@ -43,6 +43,8 @@ ggggg
 Number of Possibilities: 1
 ```
 
+While entering your guess, type in the 5 letter word you tried. In the next line, enter the colored response you get. `g` for green, `y` for yellow and `b` for black. 
+
 ## Found a Bug?
 
 Feel free to raise an issue!
