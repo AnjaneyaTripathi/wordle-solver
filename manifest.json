@@ -6,7 +6,6 @@
     "icons": {
         "128": "logo.png"
     },
-    "permissions": ["storage", "activeTab", "scripting"],
     "action": {
         "default_popup": "popup.html"
     },
