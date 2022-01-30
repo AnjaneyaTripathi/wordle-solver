@@ -7,9 +7,7 @@ If you've played this game before, you probably would have been at loss of words
 
 ## Chrome Extension
 
-```
 CHROME EXTENSION IS UNAVIALBLE VIA THE CHROME STORE AT THE MOMENT, IT IS UNDER REVIEW. TILL THEN YOU CAN CLONE AND USE THE REPO. INSTRUCTIONS GIVEN BELOW.
-```
 
 ![Chrome Extension](extension.png)
 
