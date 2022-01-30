@@ -1,0 +1,17 @@
+{
+    "name": "wordle-solver",
+    "description": "Solve Wordle using this extenstion!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "128": "logo.png"
+    },
+    "permissions": ["storage", "activeTab", "scripting"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["https://www.powerlanguage.co.uk/wordle/"],
+        "js": ["script.js"]
+    }]
+}
