@@ -1,32 +1,32 @@
 body {
-    height: 300px;
-    width: 300px;
-    background-color: #91ceff;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  background-color: #91ceff;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  border-radius: 50%;
 }
 
 h1 {
-    font-family: 'Staatliches', cursive;
+  font-family: "Staatliches", cursive;
 }
 
 .hint {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: medium;
+  list-style-type: none;
+  padding: 0;
+  font-size: medium;
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    color: azure;
-    background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: azure;
+  background-color: black;
 }
