@@ -10310,11 +10310,53 @@ async function getHints() {
     return suggestions;
 }
 
+function getAnswer() {
+  let answer;
+  try {
+    answer = JSON.parse(
+      localStorage.getItem("gameState")
+    ).solution.toUpperCase();
+  } catch (err) {
+    answer = "Copying will not help you grow :)";
+  }
+  return answer;
+}
+
+function getUnlockStatus() {
+  try {
+    return localStorage.getItem("hasPlayerUnlockedAnswer");
+  } catch (err) {
+    return false;
+  }
+}
+
+function setUnlockAnswer() {
+  try {
+    localStorage.setItem("hasPlayerUnlockedAnswer", true);
+  } catch (err) {}
+}
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    getHints().then((suggestions) => {
-        let payload = Array.from(suggestions);
-        console.log(payload.length);
-        sendResponse(payload);
-    });
+    switch(request.message) {
+      case "get_answer":
+        sendResponse(getAnswer());
+        break;
+      
+      case "get_unlock_status":
+        sendResponse(getUnlockStatus());
+        break;
+
+      case "set_unlock_answer":
+        setUnlockAnswer();
+        break;
+
+      case "get_suggestions":
+        getHints().then((suggestions) => {
+          let payload = Array.from(suggestions);
+          console.log(payload.length);
+          sendResponse(payload);
+        });
+        break;
+    }
     return true;
 });
