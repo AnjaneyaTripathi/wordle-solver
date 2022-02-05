@@ -10,7 +10,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tab) {
   chrome.tabs.sendMessage(tab[0].id, { message: "get_answer" }, function (
     response
   ) { 
-    today_solution = response;
+    response && (today_solution = response);
   });
 
   chrome.tabs.sendMessage(tab[0].id, { message: "get_unlock_status" }, function (
@@ -28,7 +28,8 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tab) {
     sugg_count.innerHTML = suggestions
       ? "Number of possible words: " + suggestions.length
       : "";
-    suggestions.forEach((element) => {
+    
+      suggestions && suggestions.forEach((element) => {
       list.innerHTML += "<li class='hint'>" + element + "</li>";
     });
   });
