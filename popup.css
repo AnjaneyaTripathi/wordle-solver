@@ -7,8 +7,19 @@ body {
   border-radius: 50%;
 }
 
-h1 {
+h1,
+p {
   font-family: "Staatliches", cursive;
+}
+
+#check_answer {
+  background-color: #91ceff;
+}
+
+#answer {
+  font-style: italic;
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif;
 }
 
 .hint {
