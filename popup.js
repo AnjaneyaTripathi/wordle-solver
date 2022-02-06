@@ -29,8 +29,12 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tab) {
       ? "Number of possible words: " + suggestions.length
       : "";
     
-      suggestions && suggestions.forEach((element) => {
-      list.innerHTML += "<li class='hint'>" + element + "</li>";
+    suggestions.forEach((element) => {
+      let li_element = document.createElement('li');
+      li_element.className="hint";
+      li_element.innerHTML = element;
+
+      list.appendChild(li_element);
     });
   });
 });
