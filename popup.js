@@ -16,8 +16,8 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tab) {
   chrome.tabs.sendMessage(tab[0].id, { message: "get_unlock_status" }, function (
     response
   ) {
-      // If true that means the player 
-      // has already unlocked the answer
+      // If true that means the player has already
+      // unlocked the answer for present day
       response && setAnswer();
   });
 
