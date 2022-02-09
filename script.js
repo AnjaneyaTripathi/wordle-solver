@@ -10324,7 +10324,10 @@ function getAnswer() {
 
 function getUnlockStatus() {
   try {
-    return localStorage.getItem("hasPlayerUnlockedAnswer");
+    const unlockedAnswer = localStorage.getItem('unlockedAnswer');
+    const todayAnswer = getAnswer();
+
+    return (unlockedAnswer === todayAnswer);
   } catch (err) {
     return false;
   }
@@ -10332,7 +10335,7 @@ function getUnlockStatus() {
 
 function setUnlockAnswer() {
   try {
-    localStorage.setItem("hasPlayerUnlockedAnswer", true);
+    localStorage.setItem('unlockedAnswer', getAnswer());
   } catch (err) {}
 }
 
